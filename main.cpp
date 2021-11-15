@@ -10,9 +10,7 @@ int main()
 	SetTargetFPS(60);
 
 	static PongPlayer player;
-	static Ball ball(screenWidth, screenHeight, &player);
-
-
+	
 	/* Tiles */
 	const int tileNum=55;
 	static Tile tiles[tileNum];
@@ -20,7 +18,7 @@ int main()
 	int tileColumn = 20;
 	for (int i=0; i<tileNum; i++)
 	{
-		tiles[i]= Tile(Vector2{ tileColumn*70 + (tileColumn+1)*34, tileRow*20 + (tileRow+1)*10 } );
+		tiles[i]= Tile(Vector2{ tileColumn*80 + (tileColumn+1)*34, tileRow*40 + (tileRow+1)*10 } );
 		tileColumn++;
 		if (i%9 == 0)
 		{
@@ -29,6 +27,8 @@ int main()
 		}
 		
 	}
+
+	static Ball ball(screenWidth, screenHeight, &player, &tiles);
 
 	while(!WindowShouldClose())
 	{

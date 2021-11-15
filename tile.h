@@ -7,9 +7,11 @@ class Tile{
 
 		struct Color color = BLUE;
 		struct Vector2 position;
-		struct Vector2 size = {70,20};
+		struct Vector2 size = {80,40};
 		
 		bool isAlive = true;
+
+		struct Vector2 points[4];
 
 		/* Functions */
 		void Place();

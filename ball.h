@@ -5,6 +5,7 @@
 class Ball{
 	public:
 		Ball(int _screenX, int _screenY, PongPlayer *_player, Tile (*_tiles)[55]);		
+		Ball(){};
 		
 
 		/* constants */
@@ -25,7 +26,6 @@ class Ball{
 		void Move();
 		void Bounce(bool bounceX, bool bounceY);
 	private:
-		int DistanceLinePoint(struct Vector2 point, struct Vector2 lineStart, struct Vector2 lineEnd);
 		void CheckCollision();
 		void GetNewPos();		
 

@@ -1,5 +1,5 @@
 #! /bin/bash
-g++ main.cpp ball.cpp player.cpp tile.cpp -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
+g++ main.cpp ball.cpp player.cpp tile.cpp game.cpp menu.cpp button.cpp -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
 
 if (( $? == 0 )); then
 	./a.out

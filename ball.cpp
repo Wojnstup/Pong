@@ -32,11 +32,6 @@ void Ball::GetNewPos()
 	newPos = { position.x + speed.x, position.y + speed.y};
 }
 
-int Ball::DistanceLinePoint(struct Vector2 point, struct Vector2 lineStart, struct Vector2 lineEnd)
-{
-	
-}
-
 void Ball::CheckCollision()
 {
 	GetNewPos();

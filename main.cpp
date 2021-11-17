@@ -1,18 +1,14 @@
 #include <raylib.h>
 #include "menu.h"
-#include <iostream>
+#include "config.h" 
 
 int main()
 {
- 
-	const int screenWidth = 1080;
-	const int screenHeight = 720;
 
-	InitWindow(screenWidth, screenHeight, "Pong");
+	InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Pong");
 	SetTargetFPS(60);
 
-	Menu menu(screenWidth, screenHeight);
-
+	Menu menu;
 	menu.Display();
 
 }

@@ -1,8 +1,10 @@
 #include "game.h"
 
-Game::Game(int _screenWidth, int _screenHeight)
+Game::Game()
 {
-	for (int i=0; i<tileNum; i++)
+	int tileRow = 0;
+	int tileColumn = 20;
+	for (int i=0; i<TILE_NUM; i++)
 	{
 		tiles[i]= Tile(Vector2{ tileColumn*80 + (tileColumn+1)*34, tileRow*40 + (tileRow+1)*10 } );
 		tileColumn++;
@@ -12,7 +14,7 @@ Game::Game(int _screenWidth, int _screenHeight)
 	        	tileColumn=0;
 	        }
 	}
-	ball = new Ball(_screenWidth, _screenHeight, &player, &tiles);
+	ball = new Ball(&player, &tiles);
 }
 
 void Game::Loop()

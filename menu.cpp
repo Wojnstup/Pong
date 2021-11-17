@@ -1,10 +1,9 @@
 #include "menu.h"
 
-Menu::Menu(int _screenWidth, int _screenHeight)
-  :play(700,600,300,100, "Play")
+Menu::Menu()
+  :play(700,400,300,100, "Play", Vector2{100,30}),
+  quit(700,550,300,100, "Quit", Vector2{100,30})
 {
-	screenWidth = _screenWidth;
-	screenHeight = _screenHeight;
 }
 
 void Menu::Display()
@@ -14,9 +13,14 @@ void Menu::Display()
 		BeginDrawing();
 			ClearBackground(Color{255,255,255,255});	
 			play.Draw();
+			quit.Draw();
 			if (play.isPressed())
 			{
 				break;
+			}
+			else if (quit.isPressed())
+			{
+			  	return;
 			}
 		EndDrawing();
 	}
@@ -25,6 +29,6 @@ void Menu::Display()
 
 void Menu::StartGame()
 {
-	Game game(screenWidth, screenHeight);
+	Game game;
 	game.Loop();
 }

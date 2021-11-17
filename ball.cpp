@@ -1,11 +1,11 @@
 #include "ball.h"
 
-Ball::Ball(int _screenX, int _screenY, PongPlayer *_player, Tile (*_tiles)[55])
+Ball::Ball(PongPlayer *_player, Tile (*_tiles)[55])
 {
 	screenEdges[0] = Vector2{0,0};
-	screenEdges[1] = Vector2{0,_screenY};
-	screenEdges[2] = Vector2{_screenX, _screenY};
-	screenEdges[3] = Vector2{_screenX,0};	
+	screenEdges[1] = Vector2{0,SCREEN_HEIGHT};
+	screenEdges[2] = Vector2{SCREEN_WIDTH, SCREEN_HEIGHT};
+	screenEdges[3] = Vector2{SCREEN_WIDTH,0};	
 	player = _player;
 	tiles = _tiles;
 };

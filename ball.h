@@ -1,10 +1,11 @@
 #include <raylib.h>
 #include "player.h"
 #include "tile.h"
+#include "config.h"
 
 class Ball{
 	public:
-		Ball(int _screenX, int _screenY, PongPlayer *_player, Tile (*_tiles)[55]);		
+		Ball(PongPlayer *_player, Tile (*_tiles)[55]);		
 		Ball(){};
 		
 
@@ -20,7 +21,7 @@ class Ball{
 
 		/* References */
 		PongPlayer *player;
-		Tile (*tiles)[55];
+        Tile (*tiles)[TILE_NUM];
 
 		/*Functions*/
 		void Move();

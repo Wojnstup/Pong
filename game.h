@@ -1,18 +1,15 @@
 #include "raylib.h"
 #include "ball.h"
+#include "config.h"
 
 class Game{
 	public:
-		Game(int _screenWidth, int _screenHeight);
+		Game();
 		void Loop();
 
-		int screenWidth;
-		int screenHeight;
-
 		PongPlayer player;
-		static const int tileNum=55;
-		Tile tiles[tileNum];
-		int tileRow = 0;
-		int tileColumn = 20;
+
+		Tile tiles[TILE_NUM];
+
 		Ball *ball; //, , &player, &tiles);
 };

@@ -4,14 +4,12 @@
 
 class Menu{
 	public:
-		Menu(int _screenWidth, int _screenHeight);	
+		Menu();	
 
 		/* Variables */
 
-		int screenWidth;
-		int screenHeight;
-
 		Button play; 
+  		Button quit;
 
 		void Display();
 	private:
